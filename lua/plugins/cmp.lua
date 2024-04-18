@@ -18,13 +18,15 @@ return {
 		local cmp = require("cmp")
 		local snip = require("luasnip")
 		local kind = require("lspkind")
+		local loader = require("luasnip.loaders.from_vscode")
 
-		require("luasnip.loaders.from_vscode").lazy_load()
+		loader.lazy_load()
 
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
 			},
+
 			snipet = {
 				expand = function(args)
 					snip.lsp_expand(args.body)
@@ -45,6 +47,11 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "codeium" },
 			}),
+
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
+			},
 
 			formating = {
 				format = kind.cmp_format({
