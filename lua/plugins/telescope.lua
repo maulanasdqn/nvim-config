@@ -28,7 +28,8 @@ return {
 
 		local keymap = vim.keymap
 
-		keymap.set("n", "<leader>ss", "<CMD>Telescope find_files<CR>", { desc = "Fuzzy Find Files" })
-		keymap.set("n", "<leader>SS", "<CMD>Telescope live_grep<CR>", { desc = "do live grep to entire file" })
+		keymap.set("n", "<leader>s", "<CMD>Telescope find_files<CR>", { desc = "Fuzzy Find Files" })
+		keymap.set("n", "<leader>S", "<CMD>Telescope live_grep<CR>", { desc = "do live grep to entire file" })
+		keymap.set("n", "<leader>b", "<CMD>Telescope buffers<CR>", { desc = "do live grep to entire file" })
 	end,
 }

@@ -60,7 +60,7 @@ return {
 					ellipsis_char = "...",
 					symbol_map = {
 						Codeium = "",
-						Text = "T",
+						Text = "",
 						Method = "M",
 						Function = "FC",
 						Constructor = "",
