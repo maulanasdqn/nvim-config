@@ -23,6 +23,8 @@ return {
 
 		local capabilities = cmp_lspconfig.default_capabilities()
 
+		capabilities.textDocument.completion.completionItem.snippetSupport = false
+
 		local signs = { Error = "x", Warn = "w", Hint = "h", "i" }
 
 		for type, icon in pairs(signs) do

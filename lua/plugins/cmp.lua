@@ -1,6 +1,6 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
+	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
@@ -18,9 +18,13 @@ return {
 		local cmp = require("cmp")
 		local snip = require("luasnip")
 		local kind = require("lspkind")
-		local loader = require("luasnip.loaders.from_vscode")
+		local loaderVscode = require("luasnip.loaders.from_vscode")
+		local loaderLua = require("luasnip.loaders.from_lua")
+		local loaderSnipmate = require("luasnip.loaders.from_snipmate")
 
-		loader.lazy_load()
+		loaderVscode.lazy_load()
+		loaderLua.lazy_load()
+		loaderSnipmate.lazy_load()
 
 		cmp.setup({
 			completion = {
@@ -46,6 +50,20 @@ return {
 				{ name = "path" },
 				{ name = "nvim_lsp" },
 				{ name = "codeium" },
+				{
+					name = "emmet_vim",
+					option = {
+						filetypes = {
+							"html",
+							"css",
+							"scss",
+							"javascript",
+							"javascriptreact",
+							"typescript",
+							"typescriptreact",
+						},
+					},
+				},
 			}),
 
 			window = {

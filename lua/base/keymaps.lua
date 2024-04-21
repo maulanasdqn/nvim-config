@@ -10,4 +10,4 @@ keymap.set("n", "Q", ":Lspsaga code_action<CR>", { silent = true, desc = "Code A
 keymap.set("n", "e", ":Lspsaga diagnostic_jump_next <CR>", { silent = true, desc = "Diagnostic Jump Next" })
 keymap.set("n", "E", ":Lspsaga diagnostic_jump_prev <CR>", { silent = true, desc = "Diagnostic Jump Prev" })
 keymap.set("n", "F", ":Lspsaga peek_definition<CR>", { silent = true, desc = "Peek definition" })
-keymap.set("n", "D", ":Lspsaga hover_doc<CR>", { silent = true, desc = "Peek definition" })
+keymap.set("n", "D", ":Lspsaga hover_doc<CR>", { silent = true, desc = "Hover doc" })
